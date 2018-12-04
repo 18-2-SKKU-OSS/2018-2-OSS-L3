@@ -71,11 +71,10 @@ Inserting 20. with 4 times coin flips (1)
 
 #Removing
 
-Removing works similar to insert procedure.
-
+Removing은 insert 과정과 유사합니다.
 TODO
 
-#See also
+#더 궁금한 점이 있다면, 
 
 [Skip List on Wikipedia](https://en.wikipedia.org/wiki/Skip_list) 
 
