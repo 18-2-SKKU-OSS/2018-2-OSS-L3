@@ -8,10 +8,10 @@ Skip List S는 일련의 정렬 된 연결리스트{L0, ..., Ln}, 계층화 된 
 
 For a skip list *S*:
 
-1. List *L0* contains every inserted item.
-2.  For lists *{L1, ..., Ln}*, *Li*  contains a randomly generated subset of the
-   items in *Li-1*
-3. Height is determined by coin-flipping.
+리스트 L0에는 삽입 된 모든 item이 포함됩니다.
+리스트 {L1, ..., Ln}에 대하여, Li는 Li-1에서 임의로 생성 된 리스트의 부분 집합을 포함합니다.
+높이는 동전 뒤집기로 결정됩니다
+
 
 ![Schematic view](Images/Intro.png)
 Figure 1
