@@ -26,30 +26,19 @@ N개의 element 검색은 최상위 계층 Ln에서 L0까지 횡단하여 시작
 
 #Inserting
 
-Inserting  element  *N*  has  a  similar process  as  searching.  It  starts  by
-traversing from  top most layer *Ln*  until *L0*. We  need to keep track  of our
-traversal path  using a  stack. It  helps us  to traverse  the path  upward when
-coin-flipping starts, so we can insert  our new element and update references to
-it.
+element N을 삽입하는 것은 search와 유사한 프로세스를가집니다. 최상위 레이어 Ln에서 L0까지 순회하는 것으로 시작합니다. 스택을 사용하여 경로를 추적해야합니다. 동전 뒤집기가 시작될 때 경로를 위쪽으로 탐색하는 데 도움이되므로 새 element를 삽입하고 참조를 업데이트 할 수 있습니다.
 
-Our objective  is to find  a element  *K* such that  its value at  the rightmost
-position of  layer *Ln*,  is less-than new  item and its  subsequent node  has a
-greater-equal value  or nil (  *K.key  < N.key <  (K.next.key or nil)*  ). Push
-element *K*  to the stack and  with element *K*,  go down using *K.down*  to the
-node below  ( at layer Ln-1  ) and repeat the  process ( forward searching  ) up
-until  *L0* where  *K.down* is  `nil`  which indicates  that level  is *L0*.  We
-terminate the process when *K.down* is nil.
+우리의 목적은 레이어 Ln의 가장 오른쪽 위치에있는 값이 새로운 아이템보다 작고 후속 노드가 더 큰 값 또는 nil을 갖는 element K를 찾는 것입니다 (K.key <N.key <(K. next.key 또는 nil)). 요소 K를 스택 및 element K로 밀어 넣고 K.down을 사용하여 아래 노드 (계층 Ln-1)로 이동 한 다음 L.o까지 프로세스를 반복합니다 (여기서 K.down은 레벨이 없음을 나타내는 nil입니다). L0. K.down이 0 일 때 프로세스를 종료합니다.
 
-At *L0*, *N* can be inserted after *K*.
+L0에서 K 다음에 N을 삽입 할 수 있습니다.
 
-Here is the  interesting part. We use coin flipping  function to randomly create
-layers.
+여기 재미있는 부분이 있습니다. 무작위로 레이어를 만들기 위해 동전 뒤집기 기능을 사용합니다.
 
-When  coin flip  function returns  0,  the whole  process is  finished but  when
-returns 1, there are two possibilities:
+코인 flip 함수가 0을 반환하면 전체 프로세스가 완료되지만 1을 반환하면 두 가지 가능성이 있습니다.
 
-1. Stack is empty ( Level is *L0* /- *Ln* or at uninitialized stage)
-2. Stack has items ( traversing upward is possible )
+스택이 비어 있습니다 (레벨은 L0 / - Ln 또는 초기화되지 않은 스테이지에서 입니다).
+스택에 항목이 있습니다 (위로 이동 가능).
+
 
 In case 1:
 
