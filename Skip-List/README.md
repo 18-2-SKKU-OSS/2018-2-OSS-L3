@@ -1,9 +1,7 @@
 # Skip List
 
-Skip List is a probablistic data-structure  with same logarithmic time bound and
-efficiency  as AVL/  or  Red-Black  tree and  provides  a  clever compromise  to
-efficiently support  search and update  operations and is relatively  simpler to
-implement compared to other map data structures.
+Skip List는 AVL / Red-Black 트리와 같은 로그 시간만큼의 효율성을 가진 확률적인 데이터 구조이며 검색 및 업데이트 작업을 효율적으로 지원하며  다른 데이터 구조와 비교하여 구현하기가 비교적 간단합니다.
+
 
 A skip  list *S*  consists of  series of  sorted linked  lists *{L0,  ..., Ln}*,
 layered hierarchicaly and each layer *L* stores  a subset of items in layer *L0*
