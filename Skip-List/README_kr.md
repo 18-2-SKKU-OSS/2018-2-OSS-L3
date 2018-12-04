@@ -40,20 +40,15 @@ L0에서 K 다음에 N을 삽입 할 수 있습니다.
 스택에 항목이 있습니다 (위로 이동 가능).
 
 
-In case 1:
+In case 1 :
 
-A new layer M*  is created with a head node *NM* referencing  head node of layer
-below  and *NM.next*  referencing new  element *N*.  New element  *N* referecing
-element *N* at previous layer.
+새로운 계층 M *은 헤드 노드 NM이 아래의 계층의 헤드 노드를 참조하고 NM.next가 새로운 요소 N을 참조하여 생성됩니다. 새로운 요소 N 이전 계층에서 요소 N을 참조합니다.
 
-In case 2:
+In case 2 :
 
-repeat until stack is empty Pop an item *F* from stack and update the references
-accordingly.  *F.next* will be *K.next* and *K.next* will be *F*
-	
-when  stack  is  empty Create  a  new  layer  consisintg  of a  head  node  *NM*
-referencing  head node  of layer  below  and *NM.next*  referencing new  element
-*N*. New element *N* referencing element *N* at previous layer.
+스택이 비어있을 때까지 반복 스택에서 항목 F를 popping하고 이에 따라 참조를 업데이트하십시오. F.next는 K.next이고 K.next는 F가 될 것입니다.
+
+스택이 비어있을 때 아래 레이어의 헤드 노드를 참조하는 헤드 노드 NM과 새 요소 N을 참조하는 NM.next를 참조하여 새 레이어 consisintg을 만듭니다. 새 요소 N 이전 레이어에서 요소 N을 참조합니다.
 		 
 
 ###Example:
