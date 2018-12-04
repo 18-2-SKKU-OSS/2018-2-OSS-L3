@@ -4,15 +4,16 @@
 
 BFS는 트리 혹은 그래프를 탐색하는 방법 중 하나 입니다. 다음 이웃 노드로 움직이기 전에 시작 노드에서부터 연결되어있는 주변 노드들을 탐색하는 방식입니다.
 
-Breadth-first search can be used on both directed and undirected graphs.
+BFS는 방향 그래프와 무방향그래프에 상관없이 사용될 수 있습니다.
 
 ## Animated example
 
 Here's how breadth-first search works on a graph:
+지금부터 BFS가 어떻게 작동하는지 설명하겠습니다 :
 
 ![Animated example of a breadth-first search](Images/AnimatedExample.gif)
 
-When we visit a node, we color it black. We also put its neighbor nodes into a [queue](../Queue/). In the animation the nodes that are enqueued but not visited yet are shown in gray.
+방문할 노드는 검정색으로 표시하겠습니다. 현재 노드와 연결된 이웃 노드들을 모두 큐에 넣습니다. 에니메이션에서 노드는 큐에 들어가지만 아직 방문되지는 않았기 때문에 회색으로 표시합니다.
 
 Let's follow the animated example. We start with the source node `A` and add it to a queue. In the animation this is shown as node `A` becoming gray.
 
