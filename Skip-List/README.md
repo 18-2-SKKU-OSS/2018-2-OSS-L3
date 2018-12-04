@@ -1,17 +1,14 @@
 # Skip List
 
-Skip List는 AVL / Red-Black 트리와 같은 로그 시간만큼의 효율성을 가진 확률적인 데이터 구조이며 검색 및 업데이트 작업을 효율적으로 지원하며  다른 데이터 구조와 비교하여 구현하기가 비교적 간단합니다.
+Skip List is a probablistic data-structure with same logarithmic time bound and efficiency as AVL/ or Red-Black tree and provides a clever compromise to efficiently support search and update operations and is relatively simpler to implement compared to other map data structures.
 
+A skip list S consists of series of sorted linked lists {L0, ..., Ln}, layered hierarchicaly and each layer L stores a subset of items in layer L0 in incremental order. The items in layers {L1, ... Ln} are chosen at random based on a coin flipping function with probability 1/2 . For traversing, every item in a layer hold references to the node below and the next node. This layers serve as express lanes to the layer underneath them, effectively making fast O(log n) searching possible by skipping lanes and reducing travel distance and in worse case searching degrades to O (n), as expected with regular linked list.
 
-Skip List S는 일련의 정렬 된 연결리스트{L0, ..., Ln}, 계층화 된 Layer로 구성되며 각 계층 L은 계층 L0에있는 항목의 하위 집합을 증분 순서로 저장합니다. 계층 {L1, ..., Ln}의 항목은 확률 1/2로 동전 뒤집기 기능을 기반으로 무작위로 선택됩니다. 순회의 경우 계층의 모든 항목은 아래 노드와 다음 노드를 참조 합니다. 이 계층은 그 아래의 계층에 대해 고속 차선 역할을하므로 레인을 건너뛰고 이동 거리를 줄이고 정기적 인 링크 목록에서 예상대로 O (n)을 검색하는 등 빠른 O (log n) 검색이 가능합니다.
+For a skip list S:
 
-
-For a skip list *S*:
-
-리스트 L0에는 삽입 된 모든 item이 포함됩니다.
-리스트 {L1, ..., Ln}에 대하여, Li는 Li-1에서 임의로 생성 된 리스트의 부분 집합을 포함합니다.
-높이는 동전 뒤집기로 결정됩니다
-
+   1. List L0 contains every inserted item.
+   2. For lists {L1, ..., Ln}, Li contains a randomly generated subset of the items in Li-1
+   3. Height is determined by coin-flipping.
 
 ![Schematic view](Images/Intro.png)
 Figure 1
